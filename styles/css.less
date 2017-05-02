@@ -1,0 +1,67 @@
+@import "./syntax-variables.less";
+
+.syntax--css, .syntax--scss, .syntax--less {
+    &.syntax--entity {
+        &.syntax--tag {
+            color: @cyan;
+        }
+
+        &.syntax--attribute-name {
+            color: darken(@light-brown, 5%);
+
+            &.syntax--pseudo-class {
+                color: @cyan;
+                font-style: italic;
+
+                .syntax--punctuation {
+                    color: @gray;
+                    font-style: normal;
+                }
+            }
+        }
+    }
+
+    &.syntax--property-name {
+        color: @light-blue;
+    }
+
+    &.syntax--variable {
+        color: @pink;
+    }
+
+    &.syntax--property-value {
+        &.syntax--constant {
+            color: @purple;
+        }
+
+        .syntax--function {
+            color: @purple;
+        }
+    }
+
+
+    &.syntax--numeric {
+        color: @gray;
+    }
+
+    &.syntax--keyword.syntax--unit {
+        color: @blue;
+    }
+
+    &.syntax--hex-value {
+        color: @brown;
+
+        .syntax--punctuation {
+            color: @light-brown;
+        }
+    }
+
+    &.syntax--parent-selector, &.syntax--reference {
+        color: @green !important;
+        font-weight: bold;
+
+        .syntax--punctuation {
+            color: @green;
+        }
+    }
+}
