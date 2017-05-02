@@ -1,8 +1,8 @@
 {
   "name": "betterthanclay-syntax",
   "theme": "syntax",
-  "version": "0.0.0",
-  "description": "A short description of your syntax theme",
+  "version": "0.2.0",
+  "description": "Light syntax theme with focus on PHP and CSS",
   "keywords": [
     "syntax",
     "theme"
