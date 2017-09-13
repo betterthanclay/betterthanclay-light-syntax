@@ -77,6 +77,10 @@
         + .syntax--namespace + .syntax--constant.syntax--other {
             font-style: normal;
             color: @cyan;
+
+            + .syntax--constant.syntax--other {
+                color: @cyan;
+            }
         }
 
         + .syntax--namespace {
@@ -96,7 +100,7 @@
         font-style: italic;
     }
 
-    .syntax--argument {
+    .syntax--parameter {
         .syntax--namespace {
             color: lighten(@cyan, 15%);
         }

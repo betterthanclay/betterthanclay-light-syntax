@@ -30,7 +30,7 @@ class Test extends core\Base implements MyInterface, \ArrayAccess {
     }
 
     public function __construct() {
-
+        some\other\Thing::go();
     }
 
     protected function _flaps(arch\IRequest $request): ?core\Uri {

@@ -141,6 +141,8 @@ atom-text-editor {
 }
 
 .syntax--punctuation {
+  color: @syntax-text-color;
+
   &.syntax--definition {
     &.syntax--comment {
       color: @orange;
@@ -226,9 +228,13 @@ atom-text-editor {
 }
 
 .syntax--meta {
+  color: @light-gray;
+
+  /*
   &.syntax--class {
     color: @light-orange;
   }
+  */
 
   &.syntax--link {
     color: @orange;
