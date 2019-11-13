@@ -7,29 +7,48 @@ namespace df\apex\directory;
 
 use df;
 use df\core;
-use df\apex;
+use df\apex as TestAlias;
 
-interface MyInterface extends \ArrayAccess, \Countable {
-
+interface MyInterface extends ArrayAccess, \Countable
+{
 }
 
-trait MyTrait {
-    public function hello() {
+trait MyTrait
+{
+    protected $vaf = [
+        'gg'
+    ];
 
+    public function hello()
+    {
     }
 }
 
+$string = "$other\n\n\nactual text";
+$constant = CONSTANT;
 
-class Test extends core\Base implements MyInterface, \ArrayAccess {
+str_replace("\r", "\n", $string);
 
+class Test extends core\Base implements namespace\gg\MyInterface, ffff\f\ArrayAccess
+{
     use core\MyTrait;
 
-    public function test(string $in=null, callable $renderer): ?string {
+    use A, B {
+        B::smallTalk insteadof A;
+        A::bigTalk insteadof B;
+    }
+
+    /**
+     * This is docblock
+     */
+    public function test(string $in=null, callable $renderer): ?string
+    {
         self::jam();
         return 'hello';
     }
 
-    public function __construct() {
+    public function __construct()
+    {
         some\other\Thing::go();
 
         $query
@@ -46,16 +65,20 @@ class Test extends core\Base implements MyInterface, \ArrayAccess {
             ->importRelationBlock('project', 'link');
     }
 
-    protected function _flaps(arch\IRequest $request): ?core\Uri {
-        if(!class_exists($class)
+    protected function _flaps(arch\IRequest $request): ?core\Uri
+    {
+        if (!class_exists($class)
         || $request instanceof arch\Stuff) {
             throw core\Error::ENotFound(
                 'Css processor '.$name.' could not be found'
             );
         }
 
-        return $this->settings->test(function(?int $in) {
+        return $this->settings->test(function (?int $in) {
             return $in ?? $out;
         });
     }
 }
+?>
+
+<div class="special">Test</div>
