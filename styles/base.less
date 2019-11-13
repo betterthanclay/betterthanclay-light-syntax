@@ -35,7 +35,7 @@ atom-text-editor {
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: @light-gray;
+    color: @red;
   }
 
   .invisible {
@@ -60,7 +60,15 @@ atom-text-editor {
 // Syntax styles
 
 .syntax--comment {
-  color: @orange;
+  color: fade(darken(@orange, 10%), 70%);
+
+  &.syntax--punctuation {
+    color: fade(@orange, 90%);
+  }
+
+  .syntax--keyword {
+    color: @pink;
+  }
 }
 
 .syntax--keyword {
@@ -71,7 +79,7 @@ atom-text-editor {
   }
 
   &.syntax--operator {
-    color: @syntax-text-color;
+    color: fade(@syntax-text-color, 55%);
   }
 
   &.syntax--other.syntax--special-method {
@@ -110,6 +118,10 @@ atom-text-editor {
 .syntax--variable {
   color: @syntax-variable-color;
 
+  &.syntax--this {
+     font-style: italic;
+  }
+
   &.syntax--interpolation {
     color: darken(@red, 10%);
   }
@@ -142,21 +154,18 @@ atom-text-editor {
 }
 
 .syntax--punctuation {
-  color: @syntax-text-color;
+  color: fade(@syntax-text-color, 60%);
+
+  &.syntax--variable,
+  &.syntax--parameters,
+  &.syntax--array,
+  &.syntax--bracket.syntax--round {
+    color: @syntax-variable-color;
+  }
 
   &.syntax--definition {
-    &.syntax--comment {
-      color: @orange;
-    }
-
     &.syntax--string {
-        color: @red;
-    }
-
-    &.syntax--variable,
-    &.syntax--parameters,
-    &.syntax--array {
-      color: @syntax-variable-color;
+        color: fade(desaturate(@red, 30%), 50%);
     }
 
     &.syntax--heading,
@@ -195,6 +204,11 @@ atom-text-editor {
   }
 }
 
+.syntax--other.syntax--inherited-class,
+.syntax--other.syntax--inherited-class .syntax--support.syntax--class {
+  color: @light-blue;
+}
+
 .syntax--entity {
   &.syntax--name.syntax--function {
     color: @dark-blue;
@@ -204,9 +218,6 @@ atom-text-editor {
     //text-decoration: underline;
   }
 
-  &.syntax--other.syntax--inherited-class {
-    color: @light-blue;
-  }
   &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
     color: @blue;
   }
@@ -230,12 +241,6 @@ atom-text-editor {
 
 .syntax--meta {
   color: @light-gray;
-
-  /*
-  &.syntax--class {
-    color: @light-orange;
-  }
-  */
 
   &.syntax--link {
     color: @orange;

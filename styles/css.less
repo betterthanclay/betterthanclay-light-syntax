@@ -7,7 +7,7 @@
         }
 
         &.syntax--attribute-name {
-            color: darken(@light-brown, 5%);
+            color: darken(@light-brown, 11%);
 
             &.syntax--pseudo-class {
                 color: @cyan;
@@ -22,7 +22,7 @@
     }
 
     &.syntax--property-name {
-        color: @light-blue;
+        color: @light-gray;
     }
 
     &.syntax--variable {
@@ -35,17 +35,33 @@
         }
 
         .syntax--function {
-            color: @purple;
+            color: @blue;
+
+            .syntax--punctuation {
+                color: @light-gray;
+            }
         }
     }
 
 
-    &.syntax--numeric {
-        color: @gray;
+    &.syntax--numeric,
+    &.syntax--property-value {
+        color: @purple;
+
+        .syntax--punctuation {
+            color: @light-gray;
+        }
     }
 
-    &.syntax--keyword.syntax--unit {
-        color: @blue;
+
+    &.syntax--keyword {
+        &.syntax--unit {
+            color: @mushy-pea;
+        }
+
+        &.syntax--important {
+            color: @red;
+        }
     }
 
     &.syntax--hex-value {

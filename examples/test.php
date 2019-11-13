@@ -41,7 +41,7 @@ class Test extends core\Base implements namespace\gg\MyInterface, ffff\f\ArrayAc
     /**
      * This is docblock
      */
-    public function test(string $in=null, callable $renderer): ?string
+    public function test(?string $in=null, callable $renderer): ?string
     {
         self::jam();
         return 'hello';
@@ -49,7 +49,7 @@ class Test extends core\Base implements namespace\gg\MyInterface, ffff\f\ArrayAc
 
     public function __construct()
     {
-        some\other\Thing::go();
+        (string)some\other\Thing::go();
 
         $query
             ->countRelation('tasks')

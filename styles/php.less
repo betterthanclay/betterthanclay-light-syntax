@@ -2,15 +2,14 @@
 
 .syntax--php {
     &.syntax--storage.syntax--type {
-        color: darken(@light-gray, 15%);
+        color: @cyan;
         font-style: italic;
 
         &.syntax--class,
         &.syntax--interface,
         &.syntax--trait,
         &.syntax--function {
-            //color: @mushy-pea;
-            color: @brown;
+            color: lighten(@brown, 5%);
             font-style: normal;
         }
     }
@@ -30,15 +29,20 @@
     }
 
     &.syntax--namespace:not(.syntax--keyword) {
-        color: lighten(@light-blue, 16%);
+        color: fade(darken(@light-blue, 5%), 70%);
 
         .syntax--separator {
-            color: @light-blue;
+            color: fade(darken(@blue, 20%), 40%);
         }
+    }
+
+    &.syntax--entity.syntax--alias {
+        color: @light-blue;
     }
 
     &.syntax--section.syntax--embedded {
         font-weight: bold;
+        color: lighten(@red, 2%);
     }
 
     &.syntax--function + .syntax--constant.syntax--other,
@@ -49,6 +53,11 @@
 
     &.syntax--output.syntax--construct {
         //color: @cyan;
+    }
+
+    &.syntax--keyword.syntax--use-as,
+    &.syntax--keyword.syntax--use-insteadof {
+        color: @purple;
     }
 
     &.syntax--keyword.syntax--control,
@@ -67,7 +76,7 @@
         color: @mushy-pea;
     }
     &.syntax--keyword.syntax--operator.syntax--class {
-        color: @light-gray;
+        color: fade(@light-gray, 70%);
         font-weight: 100;
     }
 
