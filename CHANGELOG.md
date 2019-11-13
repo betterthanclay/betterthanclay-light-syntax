@@ -2,6 +2,7 @@
 * Updated styles to match dark version layout
 * Tweaked colours to improve legibility
 * Added support for more languages
+* Sorted out readme
 
 ## 0.2.4
 * Updated repository name
