@@ -3,13 +3,13 @@
 .syntax--css, .syntax--scss, .syntax--less {
     &.syntax--entity {
         &.syntax--tag {
-            color: @cyan;
+            color: saturate(@cyan, 15%);
         }
 
         &.syntax--attribute-name {
             color: darken(@light-brown, 11%);
 
-            &.syntax--pseudo-class {
+            &.syntax--pseudo-class, &.syntax--pseudo-element {
                 color: @cyan;
                 font-style: italic;
 
@@ -22,7 +22,7 @@
     }
 
     &.syntax--property-name {
-        color: @light-gray;
+        color: desaturate(@light-blue, 15%);
     }
 
     &.syntax--variable {
@@ -35,7 +35,7 @@
         }
 
         .syntax--function {
-            color: @blue;
+            color: @purple;
 
             .syntax--punctuation {
                 color: @light-gray;
